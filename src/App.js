@@ -8,14 +8,12 @@ import './App.css';
 function App() {
 
   const [data, setData] = useState([]);
-  // const [apiUrl, setApiUrl] = useState('https://api.spaceXdata.com/v3/launches?limit=100')
   
   // Code to fetch Data from API
 
   const baseApiUrl = 'https://api.spaceXdata.com/v3/launches?limit=100'
 
   const fetchData = async (apiUrl) => {
-    console.log('Default API URL', apiUrl)
     const result = await axios.get(apiUrl)
     .then(res => {
       return res.data
@@ -36,7 +34,6 @@ function App() {
         let value = localStorage.getItem(filterArray[i])
         let id = value.split('|')[1]
         document.getElementById(id).checked = true;
-        console.log(id)
       }
     }
     //eslint-disable-next-line
@@ -54,7 +51,6 @@ function App() {
         params += `&${filterArray[i]}=${value}` 
       }
     }
-    console.log('Get Params', params)
     return params;
   }
 
