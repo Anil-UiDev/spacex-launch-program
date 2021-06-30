@@ -1,0 +1,70 @@
+.filter-section-container strong {
+    font-size: 18px;
+}
+
+.filter-section-container .filter-area {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-section-container .filter-area h3 {
+    display: inline-block;
+    font-size: 15px;
+    border-bottom: 1px solid #999;
+    width: 50%;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.filter-section-container .filter-area .custom-radio{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.filter-section-container .filter-area .custom-radio .btn-success{
+    background: #c2e199;
+    margin: 0 10px 9px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    width: 40%;
+}
+
+.filter-section-container .filter-area .custom-radio .btn-success:hover{
+    background: #7cb805;
+}
+
+.filter-section-container .filter-area .custom-radio .btn-check:checked+.btn-success{
+    background: #7cb805;
+}
+
+.filter-section-container .filter-area ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.filter-section-container .filter-area ul li {
+    width: 40%;
+    background: #c2e199;
+    border-radius: 5px;
+    margin: 0 10px 9px 10px;
+    color: #000;
+    font-size: 15px;
+    padding: 3px 0;
+    cursor: pointer;
+}
+
+.filter-section-container .filter-area ul li:hover, .filter-section-container .filter-area ul li.active{
+    background: #7cb805;
+}
