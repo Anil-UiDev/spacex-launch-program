@@ -65,12 +65,17 @@ function App() {
     fetchData(apiUrl).then(data => setData(data))
   }
 
+  const handleResetFilter = () => {
+    let apiUrl = `${baseApiUrl}`
+    fetchData(apiUrl).then(data => setData(data))
+  }
+
   return (
     <div className="spacex-app d-block w-100 p-2">
       <div className="container">
         <h1>SpaceX Launch Programs</h1>
         <div className="row">
-          <Filter successFilter={handleSuccessFilter} />
+          <Filter successFilter={handleSuccessFilter} resetFilter = {handleResetFilter}/>
           <Switch>
             <Route path="/">
               <DataList data = {data} />

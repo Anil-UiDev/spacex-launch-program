@@ -1,16 +1,35 @@
 import "./Filter.css";
 
-const Filter = ({successFilter}) => {
+const Filter = ({successFilter, resetFilter}) => {
 
     const handleFilter = (e) => {
       successFilter(e.currentTarget.value, e.currentTarget.name, e.currentTarget.id)
+    }
+
+    const clearFilter = () => {
+      resetFilter(localStorage.clear())
+      let filterArray = ['launch_year', 'land_success', 'launch_success']
+      for(let i=0; i<filterArray.length; i++){
+        let filterName = filterArray[i]
+        let element = document.getElementsByName(filterName)
+        for(let i =0; i<element.length; i++){
+          element[i].checked = false
+        }
+      }
     }
 
   return (
     <>
       <div className="col-md-3 rounded-2 bg-white py-2 filter-section-container relative mb-2">
         <div className="filter-section sticky-top">
-          <strong className="d-block w-100">Filters</strong>
+          <div className="row mb-2">
+            <div className="col-sm-6">
+              <strong className="d-block w-100">Filters</strong>
+            </div>
+            <div className="col-sm-6 text-end">
+              <div className="btn btn-outline-primary btn-sm" onClick={clearFilter}>Clear Filters</div>
+            </div>
+          </div>
           <form>
             <div className="filter-area">
               <h3>Launch Year</h3>
