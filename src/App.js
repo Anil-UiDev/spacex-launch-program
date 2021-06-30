@@ -73,7 +73,7 @@ function App() {
     <div className="spacex-app d-block w-100 p-2">
       <div className="container">
         <h1>SpaceX Launch Programs</h1>
-        <div className="row w-100">
+        <div className="row">
           <Filter successFilter={handleSuccessFilter} />
           <Switch>
             <Route path="/">

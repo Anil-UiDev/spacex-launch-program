@@ -8,7 +8,7 @@ const Filter = ({successFilter}) => {
 
   return (
     <>
-      <div className="col-md-3 rounded-2 bg-white py-2 filter-section-container relative">
+      <div className="col-md-3 rounded-2 bg-white py-2 filter-section-container relative mb-2">
         <div className="filter-section sticky-top">
           <strong className="d-block w-100">Filters</strong>
           <form>
